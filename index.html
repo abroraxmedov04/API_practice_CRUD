@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <table class="table table-striped">
+      <thead class="bg-dark text-white">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Surname</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="table-bordered" id="tbody"></tbody>
+    </table>
+
+    <div class="modalContent">
+        <button class="btn-close closeModal" onclick="hideModal()">⨉</button>
+        <form id="commentForm" onsubmit="sendDataToServer(event)">
+          <input type="text" placeholder="Name" class="nameField" required>
+          <input type="text" placeholder="Surname" class="surnameField" required>
+          <button type="submit" class="submitBtn">Submit</button>
+        </form>
+      </div>
+    <div class="overlayContent"></div>
+    <script src="./main.js"></script>
+  </body>
+</html>
